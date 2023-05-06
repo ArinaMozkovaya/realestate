@@ -7,7 +7,7 @@ body {font-family: Manrope;color: #333333;}
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;}
-
+/*=======================*/
 .title {
 	font-weight: 600;
    font-size: 40px;
@@ -16,6 +16,12 @@ body {font-family: Manrope;color: #333333;}
 .title_center {
 	text-align: center;
 }
+@media (max-width: 767.98px){
+	.title {
+		font-size: 30px;
+	}
+}
+/*=======================*/
 .page {
 	flex: 1 1 auto;
 }
@@ -353,6 +359,11 @@ body {font-family: Manrope;color: #333333;}
 		max-width: none;
 	}
 }
+@media (max-width: 990.98px) {
+	.main-block {
+		padding-bottom: 70px;
+	}
+}
 @media (max-width: 767.98px) {
 	.partners-main-block__items {
 		justify-content: center;
@@ -366,6 +377,9 @@ body {font-family: Manrope;color: #333333;}
 	}
 	.form-main-block__button {
 		width: 100%;
+	}
+	.main-block {
+		padding-bottom: 30px;
 	}
 }
 @media (max-width: 479.98px) {
@@ -389,10 +403,16 @@ body {font-family: Manrope;color: #333333;}
 
 .how__items {
 	display: grid;
-	padding: 0px 35px;
+	align-items: start;
 	grid-template-columns: repeat(3, minmax(auto,260px));
-	gap: 30px;
+	column-gap: 30px;
+	row-gap: 45px;
 	justify-content: space-between;
+}
+@media (min-width: 991px){
+	.how__items {
+		padding: 0px 35px;
+	}
 }
 .item-how {
 	text-align: center;
@@ -405,10 +425,9 @@ body {font-family: Manrope;color: #333333;}
 		right: 0;
 		top: 41px;
 		transform: translate(86.5%,0px);
-		width: 100%;
+		width: 210px;
 		height: 11px;
-		background: url('../img/how/border-1.svg') 0 0 no-repeat;
-		max-width: 210px;
+		background: url('../img/how/border-1.svg') 0 0 / 100% no-repeat;
 	}
 }
 
@@ -457,4 +476,42 @@ body {font-family: Manrope;color: #333333;}
    line-height: 162%;
 }
 
-/*--------------*/
+@media (max-width: 1199.98px){
+	.item-how:not(:last-child)::after {
+		width: 170px;
+		transform: translate(69.5%,0px);
+	}
+	.item-how_2:not(:last-child)::after {
+		transform: translate(69.5%, 0px) rotate(-180deg);
+	 }
+}
+@media (max-width: 990.98px){
+	.how {
+		padding: 70px 0px 70px 0px;
+	}
+	.item-how:not(:last-child)::after {
+		width: 120px;
+		transform: translate(63%,0px);
+	}
+	.item-how_2:not(:last-child)::after {
+		transform: translate(63%, 0px) rotate(-180deg);
+	 }
+}
+@media (max-width: 767.98px){
+	.how {
+		padding: 30px 0px 30px 0px;
+	}
+	.how__items {
+		grid-template-columns: 1fr;
+	}
+	.item-how:not(:last-child)::after {
+		display: none;
+	}
+	.item-how__icon {
+		margin-bottom: 20px;
+	}
+	.how__title {
+		margin-bottom: 35px;
+	}
+}
+/*-------------------*/
