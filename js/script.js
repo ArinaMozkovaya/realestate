@@ -19,10 +19,21 @@ const swiper = new Swiper('.slider-main-block', {
  const tabNavItems = document.querySelectorAll('.tabs-deals__button');
  const tabItems = document.querySelectorAll('.item-tabs');
  document.addEventListener("click", function (e) {
-	const trargetElement = e.target;
-	if(trargetElement.closest('.tabs-deals__button')){
-		tabNavItems.forEach(( tabNavItems, index ) => {
-
+	const targetElement = e.target;
+	let currentActiveIndex = null;
+	let newActiveIndex = null;
+	if (targetElement.closest('.tabs-deals__button')) {
+		tabNavItems.forEach((tabNavItems, index) => {
+			if (tabNavItems.classList.contains('active')) {
+				currentActiveIndex = index;
+				tabNavItems.classList.remove('active');
+			}
+			if (tabNavItems === targetElement) {
+				newActiveIndex = index;
+			}
 		});
+		targetElement.classList.add('active');
+		tabItems[newActiveIndex].classList.add('active');
+		tabItems[currentActiveIndex].classList.remove('active');
 	}
  });
