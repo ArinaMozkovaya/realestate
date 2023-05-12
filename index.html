@@ -308,9 +308,9 @@
 							<a class="reviews__item item-reviews">
 								<div class="item-reviews__rating simple-rating">
 									<div class="simple-rating__items">
-										<input id="simple-rating__15" type="radio" class="simple-rating__item" name="simple-rating-2" value="5">
+										<input id="simple-rating__15" type="radio" class="simple-rating__item" checked name="simple-rating-2" value="5">
 										<label for="simple-rating__15" class="simple-rating__label"></label>
-										<input id="simple-rating__14" type="radio" class="simple-rating__item" checked name="simple-rating-2" value="4">
+										<input id="simple-rating__14" type="radio" class="simple-rating__item" name="simple-rating-2" value="4">
 										<label for="simple-rating__14" class="simple-rating__label"></label>
 										<input id="simple-rating__13" type="radio" class="simple-rating__item" name="simple-rating-2" value="3">
 										<label for="simple-rating__13" class="simple-rating__label"></label>
@@ -334,7 +334,7 @@
 							<a class="reviews__item item-reviews">
 								<div class="item-reviews__rating simple-rating">
 									<div class="simple-rating__items">
-										<input id="simple-rating__25" type="radio" class="simple-rating__item" name="simple-rating-3" value="5">
+										<input id="simple-rating__25" type="radio" class="simple-rating__item" checked name="simple-rating-3" value="5">
 										<label for="simple-rating__25" class="simple-rating__label"></label>
 										<input id="simple-rating__24" type="radio" class="simple-rating__item" name="simple-rating-3" value="4">
 										<label for="simple-rating__24" class="simple-rating__label"></label>
@@ -386,11 +386,43 @@
 							<h2 class="subscribe__title">Get Our Newsletter</h2>
 							<p class="subscribe__sub-title">To join the worldwide community</p>
 						</div>
+						<form action="#" class="subscribe__form form-subscribe">
+							<div class="form-subscribe__content">
+								<label for="input-1" class="form-subscribe__label">Type your Email Address</label>
+								<input autocomlete="off" type="text" name="form[]" placeholder="shakir260@gmail.com" class="form-subscribe__input">
+							</div>
+							<button type="submit" class="form-subscribe__button">Send Now</button>
+						</form>
 					</div>
 				</section>
 			</main>
 			<footer class="footer">
-				
+				<div class="footer__container">
+					<a href="#" class="footer__logo">SmartSpace</a>
+					<nav class="footer__menu menu-footer">
+						<ul class="menu-footer__list">
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Home</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">About</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Service</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Portfolio</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Blog</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Contact</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="footer__copy">Copyright © 2021 AR Shakir . All Rights Reseved.</div>
+				</div>
 			</footer>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
